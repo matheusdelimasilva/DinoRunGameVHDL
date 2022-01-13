@@ -15,11 +15,12 @@ A. Top Level
 How the various components fit together:
 
 High-level diagram of components:
+
 ![Diagram](Diagram.png)
 
-<br>
 
 Hardware Setup:
+
 ![Hardware](Hardware.png)
 
 
