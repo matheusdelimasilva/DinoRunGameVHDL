@@ -1,0 +1,35 @@
+SLICE/D1 input dut2.SLICE_0 has no outgoing device arc
+SLICE/CIN1 input dut2.SLICE_0 has no outgoing device arc
+     ** dut2.SLICE_0/COUT0 is driving a pin on an incomplete path
+SLICE/B0 input dut2.SLICE_0 is on an incomplete path
+SLICE/CIN0 input dut2.SLICE_0 is on an incomplete path
+SLICE/D1 input dut2.SLICE_3 has no outgoing device arc
+SLICE/CIN1 input dut2.SLICE_3 has no outgoing device arc
+     ** dut2.SLICE_3/COUT0 is driving a pin on an incomplete path
+SLICE/C0 input dut2.SLICE_3 is on an incomplete path
+SLICE/CIN0 input dut2.SLICE_3 is on an incomplete path
+SLICE/D1 input dut3.SLICE_12 has no outgoing device arc
+SLICE/CIN1 input dut3.SLICE_12 has no outgoing device arc
+     ** dut3.SLICE_12/COUT0 is driving a pin on an incomplete path
+SLICE/B0 input dut3.SLICE_12 is on an incomplete path
+SLICE/CIN0 input dut3.SLICE_12 is on an incomplete path
+SLICE/CIN1 input dut3.SLICE_21 has no outgoing device arc
+SLICE/CIN1 input dut3.SLICE_24 has no outgoing device arc
+SLICE/CIN1 input dut3.SLICE_31 has no outgoing device arc
+SLICE/D1 input dut3.SLICE_32 has no outgoing device arc
+SLICE/CIN1 input dut3.SLICE_32 has no outgoing device arc
+     ** dut3.SLICE_32/COUT0 is driving a pin on an incomplete path
+SLICE/B0 input dut3.SLICE_32 is on an incomplete path
+SLICE/CIN0 input dut3.SLICE_32 is on an incomplete path
+SLICE/D1 input dut3.SLICE_39 has no outgoing device arc
+SLICE/CIN1 input dut3.SLICE_39 has no outgoing device arc
+     ** dut3.SLICE_39/COUT0 is driving a pin on an incomplete path
+SLICE/B0 input dut3.SLICE_39 is on an incomplete path
+SLICE/CIN0 input dut3.SLICE_39 is on an incomplete path
+SLICE/CIN1 input dut3.SLICE_35 has no outgoing device arc
+PLL/INTFBOUT output  dut.lscc_pll_inst.u_PLL_B has no incoming device arc
+     *** dut.lscc_pll_inst.u_PLL_B/FEEDBACK is driven by constant or a pin on an incomplete path
+PIO/IOPAD output  RGB_pad[4].bb_inst has no incoming device arc
+     *** RGB[4] is driven by constant or a pin on an incomplete path
+PIO/IOPAD output  RGB_pad[1].bb_inst has no incoming device arc
+     *** RGB[1] is driven by constant or a pin on an incomplete path

@@ -1,0 +1,7 @@
+-ver "C:/lscc/radiant/3.1/ip/pmi/pmi_iCE40UP.v"
+-lib pmi -vhd "C:/lscc/radiant/3.1/ip/pmi/pmi_iCE40UP.vhd"
+-lib "work" -vhd "C:/Users/mathe/Downloads/dinoFinal-20211222T174150Z-001/dinoFinal/source/impl_1/top.vhd" "C:/Users/mathe/Downloads/dinoFinal-20211222T174150Z-001/dinoFinal/source/impl_1/vga.vhd" "C:/Users/mathe/Downloads/dinoFinal-20211222T174150Z-001/dinoFinal/source/impl_1/pattern_gen.vhd"
+-vh2008
+-top top
+-isTop
+-a "iCE40UP"

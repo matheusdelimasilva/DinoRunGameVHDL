@@ -1,0 +1,18 @@
+#Start recording tcl command: 12/10/2021 15:22:34
+#Project Location: Z:/my_designs/dino; Project name: DinoProject
+prj_open "Z:/my_designs/dino/DinoProject.rdf"
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/Program Files/lscc/radiant/3.0"
+prj_run Export -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+#Stop recording: 12/10/2021 15:39:02

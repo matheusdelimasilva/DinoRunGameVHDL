@@ -1,0 +1,285 @@
+Lattice Timing Report -  Setup  and Hold, Version Radiant Software (64-bit) 3.1.0.43.2
+
+Wed Dec 22 12:43:30 2021
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2021 Lattice Semiconductor Corporation,  All rights reserved.
+
+Command line:    timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -sp High-Performance_1.2V -hsp m -pwrprd -html -rpt DinoProject_impl_1.twr DinoProject_impl_1.udb -gui
+
+-----------------------------------------
+Design:          top
+Family:          iCE40UP
+Device:          iCE40UP5K
+Package:         SG48
+Performance:     High-Performance_1.2V
+Package Status:                     Preliminary    Version 1.5
+*Performance Hardware Data Status :   Advanced Version 1.0
+-----------------------------------------
+
+
+=====================================================================
+                    Table of Contents
+=====================================================================
+    1  DESIGN CHECKING
+        1.1  SDC Constraints
+        1.2  Combinational Loop
+        1.3  Error/Warning Messages
+    2  CLOCK SUMMARY
+        2.1  Clock outglobal
+        2.2  Clock testOut_c
+    3  TIMING ANALYSIS SUMMARY
+        3.1  Overall (Setup and Hold)
+            3.1.1  Constraint Coverage
+            3.1.2  Timing Errors
+            3.1.3  Total Timing Score
+        3.2  Setup Summary Report
+        3.3  Hold Summary Report
+        3.4  Unconstrained Report
+            3.4.1  Unconstrained Start/End Points
+            3.4.2  Start/End Points Without Timing Constraints
+    4  DETAILED REPORT
+        4.1  Setup Detailed Report
+        4.2  Hold Detailed Report
+
+=====================================================================
+                    End of Table of Contents
+=====================================================================
+
+==============================================
+1  DESIGN CHECKING
+==============================================
+
+1.1  SDC Constraints
+=====================
+[IGNORED:]create_generated_clock -name {testOut_c} -source [get_pins dut.lscc_pll_inst.u_PLL_B/REFERENCECLK] -divide_by 32 -multiply_by 67 [get_pins dut.lscc_pll_inst.u_PLL_B/OUTCORE]
+[IGNORED:]create_generated_clock -name {outglobal} -source [get_pins dut.lscc_pll_inst.u_PLL_B/REFERENCECLK] -divide_by 32 -multiply_by 67 [get_pins dut.lscc_pll_inst.u_PLL_B/OUTGLOBAL]
+
+Operating conditions:
+--------------------
+    Temperature: 85
+
+1.2  Combinational Loop
+========================
+None
+
+
+1.3  Error/Warning Messages
+============================
+WARNING - No master clock for
+	generated clock	create_generated_clock -name {outglobal} -source [get_pins {dut/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {dut/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] .
+WARNING - No master clock for
+	generated clock	create_generated_clock -name {testOut_c} -source [get_pins {dut/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {dut/lscc_pll_inst/u_PLL_B/OUTCORE }] .
+WARNING - Missing master pin for instance 'dut.lscc_pll_inst.u_PLL_B'.
+WARNING - Missing master pin for instance 'dut.lscc_pll_inst.u_PLL_B'.
+
+==============================================
+2  CLOCK SUMMARY
+==============================================
+
+2.1 Clock "outglobal"
+=======================
+create_generated_clock -name {outglobal} -source [get_pins {dut/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {dut/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] 
+
+Single Clock Domain
+-------------------------------------------------------------------------------------------------------
+            Clock outglobal             |                    |       Period       |     Frequency      
+-------------------------------------------------------------------------------------------------------
+ From outglobal                         |             Target |               +INF |          0.000 MHz 
+                                        | Actual (all paths) |               ---- |               ---- 
+-------------------------------------------------------------------------------------------------------
+
+Clock Domain Crossing
+------------------------------------------------------------------------------------------------------
+            Clock outglobal             |   Worst Time Between Edges   |           Comment            
+------------------------------------------------------------------------------------------------------
+ From testOut_c                         |                         ---- |                      No path 
+------------------------------------------------------------------------------------------------------
+
+2.2 Clock "testOut_c"
+=======================
+create_generated_clock -name {testOut_c} -source [get_pins {dut/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {dut/lscc_pll_inst/u_PLL_B/OUTCORE }] 
+
+Single Clock Domain
+-------------------------------------------------------------------------------------------------------
+            Clock testOut_c             |                    |       Period       |     Frequency      
+-------------------------------------------------------------------------------------------------------
+ From testOut_c                         |             Target |               +INF |          0.000 MHz 
+                                        | Actual (all paths) |               ---- |               ---- 
+-------------------------------------------------------------------------------------------------------
+
+Clock Domain Crossing
+------------------------------------------------------------------------------------------------------
+            Clock testOut_c             |   Worst Time Between Edges   |           Comment            
+------------------------------------------------------------------------------------------------------
+ From outglobal                         |                         ---- |                      No path 
+------------------------------------------------------------------------------------------------------
+
+==============================================
+3  TIMING ANALYSIS SUMMARY
+==============================================
+
+3.1  Overall (Setup and Hold)
+==============================
+
+3.1.1  Constraint Coverage
+---------------------------
+Constraint Coverage: 0%
+
+3.1.2  Timing Errors
+---------------------
+Timing Errors: 0 endpoints (setup), 0 endpoints (hold)
+
+3.1.3  Total Timing Score
+--------------------------
+Total Negative Slack: 0.000 ns (setup), 0.000 ns (hold)
+
+3.2  Setup Summary Report
+==========================
+
+--------------------------------------------------
+There is no end point satisfying reporting criteria
+
+Total Negative Slack: 0
+
+
+3.3  Hold Summary Report
+=========================
+
+--------------------------------------------------
+There is no end point satisfying reporting criteria
+
+Total Negative Slack: 0
+
+
+3.4  Unconstrained Report
+===========================
+
+3.4.1  Unconstrained Start/End Points
+--------------------------------------
+
+Clocked but unconstrained timing start points
+--------------------------------------------------
+There is no start point satisfying reporting criteria
+
+
+Clocked but unconstrained timing end points
+-------------------------------------------------------------------
+         Listing 10 End Points          |           Type           
+-------------------------------------------------------------------
+dut2/rows__i9/D                         |    No arrival or required
+dut2/rows__i9/SP                        |    No arrival or required
+dut2/rows__i9/SR                        |    No arrival or required
+dut2/rows__i8/D                         |    No arrival or required
+dut2/rows__i7/D                         |    No arrival or required
+{dut2/rows__i7/SP   dut2/rows__i8/SP}   |    No arrival or required
+{dut2/rows__i7/SR   dut2/rows__i8/SR}   |    No arrival or required
+dut2/rows__i6/D                         |    No arrival or required
+dut2/rows__i5/D                         |    No arrival or required
+{dut2/rows__i5/SP   dut2/rows__i6/SP}   |    No arrival or required
+-------------------------------------------------------------------
+                                        |                          
+Number of unconstrained timing end poin |                          
+ts                                      |                        38
+                                        |                          
+-------------------------------------------------------------------
+
+3.4.2  Start/End Points Without Timing Constraints
+---------------------------------------------------
+
+I/O ports without constraint
+----------------------------
+Possible constraints to use on I/O ports are:
+set_input_delay,
+set_output_delay,
+set_max_delay,
+create_clock,
+create_generated_clock,
+...
+
+-------------------------------------------------------------------
+     Listing 8 Start or End Points      |           Type           
+-------------------------------------------------------------------
+ref_clk                                 |                     input
+btn                                     |                     input
+RGB[3]                                  |                    output
+vsyncout                                |                    output
+hsyncout                                |                    output
+RGB[5]                                  |                    output
+RGB[2]                                  |                    output
+RGB[0]                                  |                    output
+-------------------------------------------------------------------
+                                        |                          
+Number of I/O ports without constraint  |                         8
+                                        |                          
+-------------------------------------------------------------------
+
+Registers without clock definition
+Define the clock for these registers.
+-------------------------------------------------------------------
+         Listing 10 Instance(s)         |           Type           
+-------------------------------------------------------------------
+dut3/cactusX_i9                         |                  No Clock
+dut3/cactusX_i7                         |                  No Clock
+dut3/cactus2X_i5                        |                  No Clock
+dut3/cactus2X_i3                        |                  No Clock
+dut3/cactus2X_i9                        |                  No Clock
+dut3/cactus2X_i7                        |                  No Clock
+dut3/cactusX_i3                         |                  No Clock
+dut3/cactusX_i1                         |                  No Clock
+dut3/cactus2X_i1                        |                  No Clock
+dut3/cactusX_i5                         |                  No Clock
+-------------------------------------------------------------------
+                                        |                          
+Number of registers without clock defin |                          
+ition                                   |                       134
+                                        |                          
+-------------------------------------------------------------------
+
+==============================================
+4  DETAILED REPORT
+==============================================
+
+4.1  Setup Detailed Report
+===========================
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Detail report of critical paths
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+                    Detailed Report for timing paths 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+                    End of Detailed Report for timing paths 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+##########################################################
+
+4.2  Hold Detailed Report
+==========================
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Detail report of critical paths
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+                    Detailed Report for timing paths 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+                    End of Detailed Report for timing paths 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+##########################################################
+

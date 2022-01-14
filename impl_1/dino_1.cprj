@@ -1,0 +1,8 @@
+-ver "C:/lscc/radiant/3.1/ip/pmi/pmi_iCE40UP.v"
+-lib pmi -vhd "C:/lscc/radiant/3.1/ip/pmi/pmi_iCE40UP.vhd"
+-ver "C:/Users/mathe/Downloads/dinoFinal-20211222T174150Z-001/dinoFinal/dino_1/rtl/dino_1.v"
+-sdc  "C:/Users/mathe/Downloads/dinoFinal-20211222T174150Z-001/dinoFinal/dino_1/constraints/dino_1.ldc"
+-path "C:/Users/mathe/Downloads/dinoFinal-20211222T174150Z-001/dinoFinal/dino_1"
+-vh2008
+-top dino_1
+-a "iCE40UP"
