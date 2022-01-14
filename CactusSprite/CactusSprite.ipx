@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<RadiantModule architecture="iCE40UP" date="2021 12 10 16:43:57" device="iCE40UP5K" generator="ipgen" library="module" module="rom" name="CactusSprite" package="SG48" source_format="Verilog" speed="High-Performance_1.2V" vendor="latticesemi.com" version="1.0.2">
+ <Package>
+  <File modified="2021 12 10 16:43:56" name="rtl/CactusSprite_bb.v" type="black_box_verilog"/>
+  <File modified="2021 12 10 16:43:56" name="CactusSprite.cfg" type="cfg"/>
+  <File modified="2021 12 10 16:43:56" name="misc/CactusSprite_tmpl.v" type="template_verilog"/>
+  <File modified="2021 12 10 16:43:56" name="misc/CactusSprite_tmpl.vhd" type="template_vhdl"/>
+  <File modified="2021 12 10 16:43:57" name="rtl/CactusSprite.v" type="top_level_verilog"/>
+  <File modified="2021 12 10 16:43:57" name="constraints/CactusSprite.ldc" type="timing_constraints"/>
+  <File modified="2021 12 10 16:43:57" name="testbench/dut_params.v" type="dependency_file"/>
+  <File modified="2021 12 10 16:43:57" name="testbench/dut_inst.v" type="dependency_file"/>
+  <File modified="2021 12 10 16:43:57" name="component.xml" type="IP-XACT_component"/>
+  <File modified="2021 12 10 16:43:57" name="design.xml" type="IP-XACT_design"/>
+  <File modified="2021 06 01 01:47:24" name="testbench/tb_top.v" type="testbench_verilog"/>
+ </Package>
+</RadiantModule>
